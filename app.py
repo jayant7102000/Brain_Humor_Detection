@@ -1,3 +1,5 @@
+#######The code that i have commented, is for locahost execution and if you have to publish then there are some minor changes ...for better understanding i have kept both the code 
+
 
 # from flask import Flask, json, request
 # from tensorflow.keras.models import model_from_json
@@ -86,7 +88,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load model
-loaded_model = load_model('model')  # Load the model saved with `model.save('model')`
+loaded_model = load_model('model.h5')  # Load the model saved with `model.save('model')`
 
 def get_cv2_image_from_base64_string(b64str):
     encoded_data = b64str.split(',')[1]
