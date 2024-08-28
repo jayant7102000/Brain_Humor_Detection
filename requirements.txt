@@ -8,7 +8,7 @@ matplotlib
 Pillow
 opencv-python-headless
 keras
-tensorflow
+tensorflow==2.13.0
 fastapi
 uvicorn
 pybase64
