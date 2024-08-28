@@ -12,23 +12,23 @@
 # 🛠 Installation Guide
   Follow these steps to set up the project on your local machine:
 
- #1️⃣ Clone the Repository:
+ 1️⃣ Clone the Repository:
       git clone https://github.com/yourusername/brain-tumor-detection-api.git
       cd brain-tumor-detection-api
 
- #2️⃣ Install Dependencies: Create a virtual environment (optional but recommended) and install the required packages:
+ 2️⃣ Install Dependencies: Create a virtual environment (optional but recommended) and install the required packages:
       pip install -r requirements.txt
 
- #3️⃣ Model Setup:
+ 3️⃣ Model Setup:
       Ensure that your model.json and model.h5 files (representing the pre-trained model and its weights) are in the root directory of the project.
  
- #4️⃣ Start the API Server:
+ 4️⃣ Start the API Server:
       python app.py
 
- #5️⃣ Move to the Frontend:
+ 5️⃣ Move to the Frontend:
       cd clients 
 
- #6️⃣ Install Client-Side Dependencies:
+ 6️⃣ Install Client-Side Dependencies:
       npm install
 
  #7️⃣ Start the React Frontend:
