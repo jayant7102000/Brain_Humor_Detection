@@ -3,9 +3,9 @@
 This API provides an interface for detecting brain tumors from images using a pre-trained machine learning model (VGG16). It accepts base64-encoded images, processes them, and returns a prediction of whether the image contains a tumor.
 
 # Features
-  # Brain Tumor Detection: Classifies images as either containing a brain tumor or not.
-  # Pre-trained Model: Uses a VGG16 model architecture with weights loaded from pre-trained files.
-  # Cross-Origin Support: Includes CORS to allow cross-origin requests (e.g., from a React frontend).
+   Brain Tumor Detection: Classifies images as either containing a brain tumor or not.
+   Pre-trained Model: Uses a VGG16 model architecture with weights loaded from pre-trained files.
+   Cross-Origin Support: Includes CORS to allow cross-origin requests (e.g., from a React frontend).
 
 # Installation
 
