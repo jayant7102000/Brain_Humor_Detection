@@ -31,7 +31,7 @@
  6️⃣ Install Client-Side Dependencies:
       npm install
 
- #7️⃣ Start the React Frontend:
+ 7️⃣ Start the React Frontend:
       npm start
 
 # 🤝 Contributing
