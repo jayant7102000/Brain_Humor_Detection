@@ -6,10 +6,7 @@
 
 ![image](https://github.com/user-attachments/assets/f64734a8-079e-485c-91c6-77fa7a6a4b62)
 ![image](https://github.com/user-attachments/assets/0aaece13-fac2-4653-8260-43a2a4754dca)
-https://github.com/user-attachments/assets/9054d91a-f97b-4146-9129-6559e4f20327
-
-
-
+https://github.com/user-attachments/assets/7ebefc39-edda-4313-a568-795fe20eb5a5
 
 # 🚀 Features
    Brain Tumor Detection: Classifies images as either containing a brain tumor or not with a high degree of accuracy.
