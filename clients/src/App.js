@@ -129,8 +129,10 @@ function App() {
     for (let i = 0; i < images.length; i++) {
       imageData.push(images[i].base64_file)
     }
+// http://127.0.0.1:5000 ---If want to run code locally
+//https://brain-humor-detection.onrender.com --To run code on netlify
     const data = { image: imageData }
-    const res = await axios.post('https://brain-humor-detection.onrender.com', data).catch((err) => {
+    const res = await axios.post('http://127.0.0.1:5000', data).catch((err) => {
       console.log(err);
     });
     setPredictedImage(images)
