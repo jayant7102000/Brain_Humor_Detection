@@ -384,8 +384,9 @@ from io import BytesIO
 from PIL import Image
 
 app = Flask(__name__)
-# Configure CORS to allow requests from your Netlify site
-CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Allow CORS for your specific Netlify frontend URL
+CORS(app, resources={r"/*": {"origins": "https://brain-tumor-detection-vgg16.netlify.app"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Load the model
@@ -394,18 +395,29 @@ with open('model.json', 'r') as json_file:
 loaded_model = model_from_json(loaded_model_json)
 loaded_model.load_weights("model.h5")
 
+# Function to decode base64 string to OpenCV image
 def get_cv2_image_from_base64_string(b64str):
     encoded_data = b64str.split(',')[1]
     nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     return img
 
+# Root route for testing
 @app.route('/', methods=['GET'])
 def home():
     return "Hello World"
 
+# After request handler to add CORS headers for preflight and other responses
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'https://brain-tumor-detection-vgg16.netlify.app')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
+    return response
+
+# Route to handle the image prediction
 @app.route("/", methods=['POST'])
-def read_root():
+def predict():
     try:
         data = json.loads(request.data)
         images = data.get('image', [])
@@ -421,7 +433,6 @@ def read_root():
 
         np_images = np.array(predict_img)
         predictions = loaded_model.predict(np_images)
-        result = np.argmax(predictions, axis=1)
         probabilities = predictions[:, 1].tolist()
 
         return jsonify({"result": probabilities})
