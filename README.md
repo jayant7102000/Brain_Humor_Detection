@@ -4,6 +4,12 @@
    them, 
    and returns a prediction of whether the image contains a tumor.
 
+![image](https://github.com/user-attachments/assets/f64734a8-079e-485c-91c6-77fa7a6a4b62)
+![image](https://github.com/user-attachments/assets/0aaece13-fac2-4653-8260-43a2a4754dca)
+
+
+
+
 # 🚀 Features
    Brain Tumor Detection: Classifies images as either containing a brain tumor or not with a high degree of accuracy.
    Pre-trained Model: Utilizes the VGG16 model architecture with pre-trained weights to enhance the prediction capability.
