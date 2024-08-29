@@ -101,6 +101,7 @@ loaded_model = model_from_json(loaded_model_json)
 loaded_model.load_weights("model.h5")
 
 
+
 def get_cv2_image_from_base64_string(b64str):
     encoded_data = b64str.split(',')[1]
     nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
@@ -114,9 +115,10 @@ def get_image_from_base64_string(b64str):
     img = Image.open(image_data)
     return img
 
-@app.route('/home',methods=['GET'])
+@app.route('/',methods=['GET'])
 def home():
     return "Hello World"
+
 
 @app.route("/", methods=['POST'])
 def read_root():
