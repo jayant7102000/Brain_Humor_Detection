@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import ReactImageFileToBase64 from "react-file-image-to-base64";
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
