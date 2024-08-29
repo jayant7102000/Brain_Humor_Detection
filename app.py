@@ -167,8 +167,8 @@ from PIL import Image
 
 app = Flask(__name__)
 # Configure CORS to allow requests from your Netlify site
-CORS(app, resources={r"/*": {"origins": "https://brain-tumor-detection-vgg16.netlify.app"}})
-app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 
 # Load the model
 with open('model.json', 'r') as json_file:
